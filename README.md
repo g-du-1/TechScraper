@@ -1,5 +1,5 @@
 # TechScraper
 
-`npm run test:watch`
-
-`npm run build:watch`
+- `npm install`
+- `npm run build:watch`
+- `npm run test:watch`
