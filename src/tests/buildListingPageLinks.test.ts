@@ -28,7 +28,7 @@ describe("buildListingPageLinks", () => {
   test("Links contain the base url", () => {
     for (let i: number = 0; i < result.length; i++) {
       const link: string = result[i];
-      expect(link).toContain(baseConfig.baseUrl);
+      expect(link).toContain(baseConfig.baseSearchUrl);
     }
   });
 });

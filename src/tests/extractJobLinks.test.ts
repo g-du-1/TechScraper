@@ -11,7 +11,7 @@ describe("extractJobLinks", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({ headless: false });
     page = await browser.newPage();
-    await page.goto(baseConfig.baseUrl);
+    await page.goto(baseConfig.baseSearchUrl);
     jobLinks = await extractJobLinks(page, baseConfig.jobLinkSelector);
   });
 
@@ -25,7 +25,7 @@ describe("extractJobLinks", () => {
 
   test("Doesn't include the base URL in the links", async () => {
     jobLinks.forEach((jobLink) => {
-      expect(jobLink).not.toContain(baseConfig.baseUrl);
+      expect(jobLink).not.toContain(baseConfig.baseSearchUrl);
     });
   });
 });
