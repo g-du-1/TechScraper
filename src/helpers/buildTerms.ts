@@ -1,15 +1,8 @@
 import puppeteer from "puppeteer";
 import baseConfig from "../config/baseConfig";
+import { ITermData } from "../types";
+import { IPageData } from "../types";
 import { randomIntBetween } from "./randomIntBetween";
-
-interface IPageData {
-  salary: string | null | undefined;
-  body: string | null | undefined;
-}
-
-interface ITermData {
-  [key: string]: number;
-}
 
 export const buildTerms = async (page: puppeteer.Page, links: (string | null)[], throttle: boolean = true): Promise<ITermData> => {
   const data: ITermData = {};

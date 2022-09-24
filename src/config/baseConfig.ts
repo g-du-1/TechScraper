@@ -1,14 +1,4 @@
-interface IBaseConfig {
-  baseUrl: string;
-  baseSearchUrl: string;
-  paginationParam: string;
-  jobLinkSelector: string;
-  salarySelector: string;
-  jobDescSelector: string;
-  outFileName: string;
-  outFileHeaderStr: string;
-  nOfListingPages: number;
-}
+import { IBaseConfig } from "../types";
 
 const baseConfig: IBaseConfig = {
   baseUrl: "https://uk.indeed.com",
@@ -19,7 +9,7 @@ const baseConfig: IBaseConfig = {
   jobDescSelector: "#jobDescriptionText",
   outFileName: "out.csv",
   outFileHeaderStr: "term,occurence\r\n",
-  nOfListingPages: 1,
+  nOfListingPages: 10,
 };
 
 export default baseConfig;
