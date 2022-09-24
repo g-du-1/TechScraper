@@ -27,7 +27,7 @@ export const buildTerms = async (page: puppeteer.Page, links: (string | null)[],
 
     if (terms) {
       for (let i = 0; i < terms.length; i++) {
-        let term = terms[i].toLowerCase().replace(/[,()\n\r?]/g, "");
+        let term = terms[i].toLowerCase().replace(/[,()\n\r?;]/g, "");
         if (term !== "" && term !== " " && data[term]) {
           data[term]++;
         } else {
