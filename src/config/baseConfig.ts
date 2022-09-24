@@ -6,6 +6,8 @@ interface IBaseConfig {
   salarySelector: string;
   jobDescSelector: string;
   outFileName: string;
+  outFileHeaderStr: string;
+  nOfListingPages: number;
 }
 
 const baseConfig: IBaseConfig = {
@@ -16,6 +18,8 @@ const baseConfig: IBaseConfig = {
   salarySelector: "#salaryInfoAndJobType",
   jobDescSelector: "#jobDescriptionText",
   outFileName: "out.csv",
+  outFileHeaderStr: "term,occurence\r\n",
+  nOfListingPages: 5,
 };
 
 export default baseConfig;
