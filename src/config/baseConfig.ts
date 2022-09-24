@@ -7,9 +7,11 @@ const baseConfig: IBaseConfig = {
   jobLinkSelector: "h2.jobTitle a",
   salarySelector: "#salaryInfoAndJobType",
   jobDescSelector: "#jobDescriptionText",
+  jobTitleSelector: "h1",
+  jobCompanySelector: ".jobsearch-CompanyInfoContainer a",
   outFileName: "out.csv",
   outFileHeaderStr: "term,occurence\r\n",
-  nOfListingPages: 10,
+  nOfListingPages: 2,
 };
 
 export default baseConfig;
