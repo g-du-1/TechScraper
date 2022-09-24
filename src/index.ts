@@ -22,7 +22,7 @@ import fs from "fs";
     fs.writeFileSync(baseConfig.outFileName, baseConfig.outFileHeaderStr);
 
     for (const property in data) {
-      fs.appendFileSync(baseConfig.outFileName, `${property},${data[property]}\r\n`);
+      fs.appendFileSync(baseConfig.outFileName, `${property},${data[property]}\n`);
     }
   }
 
