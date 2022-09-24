@@ -13,6 +13,8 @@ export const buildTerms = async (page: puppeteer.Page, links: (string | null)[],
       return {
         salary: document.querySelector(baseConfig.salarySelector)?.textContent,
         body: document.querySelector(baseConfig.jobDescSelector)?.textContent,
+        title: document.querySelector(baseConfig.jobTitleSelector)?.textContent,
+        company: document.querySelector(baseConfig.jobCompanySelector)?.textContent,
       };
     }, baseConfig);
 
