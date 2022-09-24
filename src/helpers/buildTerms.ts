@@ -11,7 +11,7 @@ interface ITermData {
   [key: string]: number;
 }
 
-export const buildTerms = async (page: puppeteer.Page, links: (string | null)[], throttle: boolean = true): Promise<{}> => {
+export const buildTerms = async (page: puppeteer.Page, links: (string | null)[], throttle: boolean = true): Promise<ITermData> => {
   const data: ITermData = {};
 
   for (let i: number = 0; i < links.length; i++) {
