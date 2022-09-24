@@ -19,7 +19,7 @@ const baseConfig: IBaseConfig = {
   jobDescSelector: "#jobDescriptionText",
   outFileName: "out.csv",
   outFileHeaderStr: "term,occurence\r\n",
-  nOfListingPages: 5,
+  nOfListingPages: 1,
 };
 
 export default baseConfig;
